@@ -1,8 +1,8 @@
-# 中华人民共和国县以上行政区划代码  
+# 中华人民共和国县以上行政区划信息  
 
-中华人民共和国县以上行政区划代码（2023年更新），来源自[民政部官方数据](https://www.mca.gov.cn/mzsj/xzqh/2023/202301xzqh.html)（感谢https://gist.github.com/mayufo/4207ed3fa925e6b3df7559832af85165?permalink_comment_id=5056538#gistcomment-5056538 提供的信息）
+中华人民共和国县以上行政区划信息（2023年更新），来源自[民政部官方数据](https://www.mca.gov.cn/mzsj/xzqh/2023/202301xzqh.html)（感谢https://gist.github.com/mayufo/4207ed3fa925e6b3df7559832af85165?permalink_comment_id=5056538#gistcomment-5056538 提供的信息）
 
-# 数据格式：
+# SQLite数据库数据格式：
 
 |字段|字段说明|
 | -----------| ---------------------------------------------------|
@@ -13,11 +13,11 @@
 |province|行政区划所属省名称|
 |city|行政区划所属市名称|
 
-# 相关代码（使用Go语言）
+# 相关格式化代码（使用Go语言）
 
-通过民政部官方数据excel格式，使用Go语言将信息存储为区域切片，并输出处理后的数据至SQLite数据库。
+通过民政部官方数据excel文件，使用Go语言将信息存储为区域切片，并输出处理后的数据至SQLite数据库。
 
-数据格式：
+Go行政区划数据格式：
 
 ```undefined
 Region struct {
